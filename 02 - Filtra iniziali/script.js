@@ -2,12 +2,19 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
-
 // Dichiara la funzione qui.
 
+function firstCharFilter(wordList, firstChar) {
+  const newWordList = [];
+
+  wordList.forEach((word) => {
+    if (word[0] === firstChar) newWordList.push(word);
+  });
+  return newWordList;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(firstCharFilter(names, "A"));
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
